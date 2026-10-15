@@ -1,0 +1,72 @@
+{
+  "name": "opencode-goal",
+  "version": "1.0.0",
+  "description": "Claude Code-style /goal for OpenCode v2: set a completion condition and the agent keeps working until it is met.",
+  "author": "EL4CTEO",
+  "license": "MIT",
+  "type": "module",
+  "homepage": "https://github.com/EL4CTEO/opencode-goal#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EL4CTEO/opencode-goal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EL4CTEO/opencode-goal/issues"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "goal",
+    "autonomous",
+    "agent",
+    "loop"
+  ],
+  "exports": {
+    ".": "./index.ts",
+    "./tui": "./tui.ts",
+    "./rpc": "./rpc.ts"
+  },
+  "files": [
+    "index.ts",
+    "tui.ts",
+    "rpc.ts",
+    "src"
+  ],
+  "engines": {
+    "opencode": ">=2.0.29"
+  },
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "e2e": "bun scripts/e2e.ts",
+    "check": "tsc --noEmit && bun test"
+  },
+  "peerDependencies": {
+    "@opencode/plugin": ">=2.0.29",
+    "@opentui/core": ">=0.5.17",
+    "@opentui/solid": ">=0.5.17",
+    "solid-js": ">=1.9.0"
+  },
+  "peerDependenciesMeta": {
+    "@opencode/plugin": {
+      "optional": true
+    },
+    "@opentui/core": {
+      "optional": true
+    },
+    "@opentui/solid": {
+      "optional": true
+    },
+    "solid-js": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@opencode/plugin": "2.0.29",
+    "@opentui/core": "0.5.17",
+    "@opentui/solid": "0.5.17",
+    "@types/bun": "1.4.0",
+    "solid-js": "1.9.15",
+    "typescript": "5.8.2"
+  }
+}
