@@ -27,7 +27,7 @@ const password = crypto.randomUUID()
 const headers = { authorization: `Basic ${Buffer.from(`opencode:${password}`).toString("base64")}` }
 
 mkdirSync(path.join(project, ".opencode"), { recursive: true })
-writeFileSync(path.join(project, ".opencode", "opencode.json"), JSON.stringify({ plugins: [pluginRoot.replaceAll("\\", "/")] }, null, 2))
+writeFileSync(path.join(project, ".opencode", "opencode.json"), JSON.stringify({ plugins: [process.env.E2E_PLUGIN ?? pluginRoot.replaceAll("\\", "/")] }, null, 2))
 
 const log = createWriteStream(path.join(project, "server.log"))
 const server = spawn("opencode", ["serve", "--hostname", "127.0.0.1", "--port", String(port), "--print-logs", "--log-level", "info"], {
