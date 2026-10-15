@@ -2,15 +2,15 @@
 
 Claude Code's `/goal` for **OpenCode v2**. Give the agent a finish line; it keeps working, turn after turn, until an evaluator confirms the condition is met.
 
-![/goal in the OpenCode CLI](assets/goal-status.png)
+![/goal in the OpenCode CLI](https://raw.githubusercontent.com/EL4CTEO/opencode-goal/main/assets/goal-status.png)
 
 ## Install
 
 ```sh
-opencode plugin add github:EL4CTEO/opencode-goal
+opencode plugin add @el4cteo/opencode-goal
 ```
 
-Or point `plugins` in `opencode.json` at a local clone:
+Or from GitHub: `opencode plugin add github:EL4CTEO/opencode-goal`, or point `plugins` in `opencode.json` at a local clone:
 
 ```json
 { "plugins": ["/path/to/opencode-goal"] }
@@ -32,7 +32,7 @@ Requires OpenCode 2.0.29 or newer.
 
 While a goal runs, the footer shows its state:
 
-![footer indicator](assets/goal-running.png)
+![footer indicator](https://raw.githubusercontent.com/EL4CTEO/opencode-goal/main/assets/goal-running.png)
 
 **Write a good condition:** one measurable end state, how to prove it (`npm test exits 0`), and anything that must not change. Add a limit for open-ended work, e.g. `or stop after 20 turns`.
 
@@ -60,7 +60,7 @@ All optional, set in `opencode.json`:
 {
   "plugins": [
     {
-      "package": "github:EL4CTEO/opencode-goal",
+      "package": "@el4cteo/opencode-goal",
       "options": {
         "evaluator": { "model": "opencode-go/deepseek-v4.1-flash" },
         "maxTurns": 200,

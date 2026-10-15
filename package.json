@@ -1,5 +1,5 @@
 {
-  "name": "opencode-goal",
+  "name": "@el4cteo/opencode-goal",
   "version": "1.0.0",
   "description": "Claude Code-style /goal for OpenCode v2: set a completion condition and the agent keeps working until it is met.",
   "author": "EL4CTEO",
@@ -68,5 +68,8 @@
     "@types/bun": "1.4.0",
     "solid-js": "1.9.15",
     "typescript": "5.8.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
