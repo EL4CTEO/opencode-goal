@@ -40,9 +40,9 @@
     "test": "bun test",
     "typecheck": "tsc --noEmit",
     "e2e": "bun scripts/e2e.ts",
-    "check": "tsc --noEmit && bun test && bun run build",
-    "build": "bun scripts/build.ts",
-    "prepublishOnly": "bun run build && bun test"
+    "check": "tsc --noEmit && bun test && bun run compile",
+    "prepublishOnly": "bun run compile && bun test",
+    "compile": "bun scripts/build.ts"
   },
   "peerDependencies": {
     "@opencode/plugin": ">=2.0.29",
