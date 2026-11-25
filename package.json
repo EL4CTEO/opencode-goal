@@ -1,6 +1,6 @@
 {
   "name": "@el4cteo/opencode-goal",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Claude Code-style /goal for OpenCode v2: set a completion condition and the agent keeps working until it is met.",
   "author": "EL4CTEO",
   "license": "MIT",
@@ -65,12 +65,12 @@
     }
   },
   "devDependencies": {
-    "@opencode/plugin": "2.2.0",
-    "@opentui/core": "0.7.0",
-    "@opentui/solid": "0.7.0",
-    "@types/bun": "1.4.0",
-    "solid-js": "1.9.15",
-    "typescript": "5.8.2"
+    "@opencode/plugin": "2.4.1",
+    "@opentui/core": "0.9.9",
+    "@opentui/solid": "0.9.9",
+    "@types/bun": "1.4.5",
+    "solid-js": "1.9.20",
+    "typescript": "7.0.2"
   },
   "publishConfig": {
     "access": "public"
