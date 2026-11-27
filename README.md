@@ -1,5 +1,7 @@
 # opencode-goal
 
+[![npm](https://img.shields.io/npm/v/@el4cteo/opencode-goal)](https://www.npmjs.com/package/@el4cteo/opencode-goal) [![license](https://img.shields.io/github/license/EL4CTEO/opencode-goal)](LICENSE)
+
 Claude Code's `/goal` for **OpenCode v2**. Give the agent a finish line; it keeps working, turn after turn, until an evaluator confirms the condition is met.
 
 ![/goal in the OpenCode CLI](https://raw.githubusercontent.com/EL4CTEO/opencode-goal/main/assets/goal-status.png)
@@ -10,7 +12,7 @@ Claude Code's `/goal` for **OpenCode v2**. Give the agent a finish line; it keep
 opencode plugin add @el4cteo/opencode-goal
 ```
 
-Or from GitHub: `opencode plugin add github:EL4CTEO/opencode-goal`, or point `plugins` in `opencode.json` at a local clone:
+Or `opencode plugin add github:EL4CTEO/opencode-goal`, or a local clone in `opencode.json`:
 
 ```json
 { "plugins": ["/path/to/opencode-goal"] }
@@ -41,8 +43,7 @@ While a goal runs, the footer shows its state:
 - After every turn, an evaluator reads the conversation and answers **met**, **not met** or **impossible**.
 - **Not met:** the agent gets the reason and starts the next turn on its own.
 - **Met / impossible:** the goal ends and a note is added to the transcript.
-- The evaluator only sees what's in the conversation, so the agent is told to show proof (test output, command results).
-- By default the evaluator reuses the session's cached context, so each check costs little more than a short answer.
+- The evaluator only sees the conversation, so the agent is told to show proof (test output, command results). By default it reuses the session's cached context, so each check is cheap.
 
 Safety rails:
 
